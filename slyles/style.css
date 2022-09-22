@@ -309,7 +309,7 @@ img {
         padding-top: 1rem;
     }
 
-    .services__img-beard {
+    .services__img-hair {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
     }
@@ -371,7 +371,7 @@ img {
 .horary {
     display: grid;
     /*grid responsive y adaptables*/
-    grid-template-columns: repeat(auto-fit, minmax( min(100%, 15rem), 1fr ));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
     gap: 2rem;
     padding-bottom: 1rem;
 }
@@ -381,10 +381,11 @@ img {
     border-radius: 2rem;
 }
 
-.hours h4{
+.hours h4 {
     margin: 2rem 0 0 0;
 }
-.hours p{
+
+.hours p {
     margin: 0 0 2rem 0;
 }
 
@@ -393,21 +394,50 @@ img {
     margin-top: 3rem;
     margin-bottom: 2rem;
 }
-@media (min-width: 768px) {
-    .about {
-        display: grid;
-        /*grid responsive y adaptables*/
-        grid-template-columns: repeat(auto-fit, minmax( min(100%, 30rem), 1fr ));
-        gap: 2rem;
-    }
-}
 
 .slaiders {
-    background-image: url(../img/slaider2.jpg);
+    height: 408px;
+    background-image: url(../img/slaider3.jpg);
+    animation: animate 20s infinite;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+@media (min-width: 768px) {
+    .about {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        gap: 2rem;
+    }
 
+    .description {
+        width: 60%;
+        height: auto;
+    }
 
+    .slaiders {
+        width: 40%;
+        height: 408px;
+    }
+}
+
+@keyframes animate {
+    25% {
+        background-image: url(../img/slaider1.jpeg);
+        background-size: cover;
+    }
+    50% {
+        background-image: url(../img/slaider2.jpg);
+        background-size: cover;
+    }
+    75% {
+        background-image: url(../img/slaider3.jpg);
+        background-size: cover;
+    }
+    100% {
+        background-image: url(../img/slaider4.jpg);
+        background-size: cover;
+    }
+}
