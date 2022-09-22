@@ -7,6 +7,7 @@
     --cafeAmarillosoOscuro: #DA8C19;
     --cafeAmarillosoIntenso: #9D682A;
     --cafeOscuro: #4B3821;
+    --cafeOpaco: #797878;
 
     --negro: #000000;
     --blanco: #FFFFFF;
@@ -33,6 +34,9 @@ body {
     font-size: 1.6rem;
     line-height: 2;
     font-family: var(--fontsHeading);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Globales y Tipografia*/
@@ -96,7 +100,6 @@ img {
     color: var(--negro);
 }
 
-
 /* Header*/
 .home {
     background-image: url(../img/fondoHeader.jpeg);
@@ -107,8 +110,13 @@ img {
     position: relative;
 }
 
-.header, .footer{
+.header,
+.footer {
     background-color: var(--cafeOscuro);
+}
+
+.footer {
+    margin-top: auto;
 }
 
 .header.home {
@@ -188,6 +196,7 @@ img {
     width: 50%;
     margin: auto;
 }
+
 @media (min-width: 768px) {
     .objectives__img {
         margin-left: 27%;
@@ -208,6 +217,7 @@ img {
     margin: auto;
     align-items: center;
 }
+
 @media (min-width: 768px) {
     .objectives__item-list {
         width: 100%;
@@ -250,6 +260,7 @@ img {
 .contact-us p {
     margin: 0 0 3rem 0;
 }
+
 @media (min-width: 768px) {
     .contact {
         display: grid;
@@ -279,3 +290,124 @@ img {
     padding-top: 3rem;
     width: 100%;
 }
+
+/* pagina servicios */
+.container-services {
+    margin-top: 3rem;
+}
+
+.services {
+    background-color: var(--cafeOpaco);
+}
+
+/* pocicionando imagenes */
+@media (min-width: 768px) {
+    .services__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+        padding-top: 1rem;
+    }
+
+    .services__img-beard {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .services__img-beard {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .services__img-combo {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    }
+}
+
+.services__description h3 {
+    text-transform: uppercase;
+    color: var(--cafeAmarilloso);
+    margin: 0;
+}
+
+.services__description p {
+    text-align: justify;
+    color: var(--cafeClaro);
+    padding: 0 20%;
+    margin: 0;
+}
+
+/* precio y boton */
+.services__price {
+    display: flex;
+    flex-direction: column;
+    margin: auto auto;
+    justify-content: center;
+    align-items: center;
+    color: var(--cafeAmarilloso);
+    background-color: var(--cafeOscuro);
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+}
+
+/* boton reservas */
+.service__button {
+    text-transform: uppercase;
+    background-color: var(--cafeAmarilloso);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: .5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 2.2rem;
+    width: 80%;
+    border: none;
+}
+
+/* horario atencion **/
+.horary {
+    display: grid;
+    /*grid responsive y adaptables*/
+    grid-template-columns: repeat(auto-fit, minmax( min(100%, 15rem), 1fr ));
+    gap: 2rem;
+    padding-bottom: 1rem;
+}
+
+.hours {
+    background-color: var(--cafeClaro);
+    border-radius: 2rem;
+}
+
+.hours h4{
+    margin: 2rem 0 0 0;
+}
+.hours p{
+    margin: 0 0 2rem 0;
+}
+
+/* pagina nosotros */
+.about {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+    .about {
+        display: grid;
+        /*grid responsive y adaptables*/
+        grid-template-columns: repeat(auto-fit, minmax( min(100%, 30rem), 1fr ));
+        gap: 2rem;
+    }
+}
+
+.slaiders {
+    background-image: url(../img/slaider2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
